@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://content.viaplay.se/pc-se/serier/samtliga')
+    fetch('/pc-se/serier/samtliga')
       .then(response => response.json())
       .then(data => {
         const images = data._embedded['viaplay:blocks'][0]._embedded['viaplay:products']
